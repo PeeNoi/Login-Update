@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from 'react'
 import Link from 'next/link'
@@ -17,7 +17,9 @@ function Navbar({ session }) {
         <ul className='flex space-x-4'>
             {!session ? (
                 <>
-                    <li><Link href="/graph">graph</Link></li>
+                    <li>
+                        <Link href="/dashboard"className = 'bg-[#51c2d5] text-white py-2 px-4 rounded-md hover:bg-[#006a7d] transition-colors duration-300'>
+                            Dashboard</Link></li>
                     <li>
                         <Link href="/login" className='bg-[#73C088] text-white py-2 px-4 rounded-md hover:bg-[#459866] transition-colors duration-300'>
                             Login
@@ -31,7 +33,10 @@ function Navbar({ session }) {
                 </>
             ) : (
                 <>
-                    <li><Link href="/graph">graph</Link></li>
+                    {/* <li> */}
+                        {/* <Link href="/dashboard"className = 'bg-[#FBD741] text-white py-2 px-4 rounded-md hover:bg-[#FFA500] transition-colors duration-300'>
+                            Dashboard
+                        </Link></li> */}
                     {/* <li>
                         <Link href="/welcome" className='bg-gray-500 text-white border py-2 px-3 rounded-md text-lg my-2'>
                             Profile
